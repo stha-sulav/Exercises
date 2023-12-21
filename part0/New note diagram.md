@@ -5,8 +5,8 @@ sequenceDiagram
 
     browser->>server: GET GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
-    Note right of browser: The browser sends data submitted with the form as payload to the server
-    Note left of server: The payload is pushed to the notes list with the form input and date and redirects to /notes as aresponse.
+    Note right of browser: The browser sends data submitted with the form as payload to the server.
+    Note left of server: The payload is pushed to the notes list with the form input and date and redirects to /notes as a response from server.
     server-->>browser: Status Code:302
     deactivate server
 
