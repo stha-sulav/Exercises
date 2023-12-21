@@ -3,7 +3,7 @@ sequenceDiagram
     participant browser
     participant server
 
-    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
     activate server
     Note right of browser: The browser sends data submitted with the form as payload to the server and the payload is pushed to the notes list with the form input and date and redirects to /notes as aresponse.
     server-->>browser: Status Code:302
@@ -34,5 +34,6 @@ sequenceDiagram
     server-->>browser: List of updated notes (...., {"content": "test","date": "2023-12-21T12:37:50.519Z"}]).
     deactivate server
 
+    Note right of browser: The browser executes the callback function that renders the notes
 
 ```
