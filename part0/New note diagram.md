@@ -3,7 +3,7 @@ sequenceDiagram
     participant browser
     participant server
 
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
+    browser->>server: GET GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
     Note right of browser: The browser sends data submitted with the form as payload to the server and the payload is pushed to the notes list with the form input and date and redirects to /notes as aresponse.
     server-->>browser: Status Code:302
